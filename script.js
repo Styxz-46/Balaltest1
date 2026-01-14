@@ -144,21 +144,21 @@ const products = [
         variants: [
             {
                 id: "iqiyi-01",
-                name: "iQIYI 1 Month Premium",
+                name: "iQIYI 1 Month Premium Share",
                 description: "Nikmati streaming tanpa iklan selama 1 bulan. Akses konten eksklusif, episode terbaru lebih cepat, dan kualitas video HD hingga Full HD. Cocok untuk pecinta drama, film, dan anime Asia.",
                 price: 7000,
                 image: "iqiyi.png"
             },
             {
                 id: "iqiyi-02",
-                name: "iQIYI 1 Month Standar",
+                name: "iQIYI 1 Month Standar Share",
                 description: "Akses iQIYI versi standar untuk menonton berbagai film, drama, dan anime dengan kualitas video dasar. Cocok untuk pengguna yang ingin hiburan hemat dengan fitur utama iQIYI.",
                 price: 6000,
                 image: "iqiyi.png"
             },
             {
                 id: "iqiyi-03",
-                name: "iQIYI",
+                name: "iQIYI 1 Year Premium Share",
                 description: "Paket premium tahunan dengan harga lebih hemat. Streaming tanpa iklan, akses semua konten eksklusif, kualitas video HD / Full HD, dan pengalaman menonton nyaman sepanjang tahun tanpa perlu perpanjang bulanan.",
                 price: 15000,
                 image: "iqiyi.png"
