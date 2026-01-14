@@ -106,7 +106,7 @@ const products = [
         ]
     },
     {
-        id: 6,
+        id: 5,
         name: "Spotify Premium",
         description: "Streaming musik tanpa iklan dengan kualitas tinggi dan download offline.",
         baseImage: "spotify.png",
@@ -136,7 +136,7 @@ const products = [
         ]
     },
     {
-        id: 7,
+        id: 6,
         name: "iQIYI Premium",
         description: "Aplikasi streaming film, drama Asia, anime, dan variety show dengan subtitle Indonesia.",
         baseImage: "iqiyi.png",
