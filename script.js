@@ -17,14 +17,14 @@ const products = [
                 id: "alight-ios",
                 name: "Alight Motion iOS",
                 description: "Versi untuk iPhone dan iPad",
-                price: 3000,
+                price: 2000,
                 image: "alight.png"
             },
             {
                 id: "alight-android",
                 name: "Alight Motion Android",
                 description: "Versi untuk Android",
-                price: 3000,
+                price: 2000,
                 image: "alight.png"
             },
         ]
