@@ -1,4 +1,4 @@
-[file name]: index (1).html
+[file name]: index.html
 [file content begin]
 <!DOCTYPE html>
 <html lang="id">
