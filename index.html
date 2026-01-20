@@ -1,3 +1,5 @@
+[file name]: index.html
+[file content begin]
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -60,12 +62,6 @@
             padding: 20px 0;
         }
         
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        
         .logo {
             display: flex;
             align-items: center;
@@ -86,59 +82,6 @@
             background: linear-gradient(to right, var(--primary), var(--primary-dark));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        
-        .login-btn {
-            background: linear-gradient(to right, var(--primary), var(--primary-dark));
-            color: white;
-            border: none;
-            border-radius: 12px;
-            padding: 12px 24px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .login-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
-        }
-        
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-left: auto;
-            margin-right: 20px;
-        }
-        
-        .user-avatar {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(to right, var(--primary), var(--primary-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-        }
-        
-        .user-name {
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        .logout-btn {
-            background: none;
-            border: none;
-            color: var(--danger);
-            cursor: pointer;
-            font-size: 0.9rem;
-            margin-left: 10px;
         }
         
         .nav-cart {
@@ -198,6 +141,123 @@
             margin: 0 auto 40px;
         }
         
+        /* Search and Filter Section - BARU */
+        .search-filter-section {
+            margin-bottom: 40px;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .search-container {
+            position: relative;
+            margin-bottom: 24px;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 16px 52px 16px 24px;
+            border: 2px solid var(--light-gray);
+            border-radius: 16px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+            background: white;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+            font-size: 1.2rem;
+        }
+        
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .filter-label {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--gray);
+        }
+        
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .reset-btn {
+            margin-left: auto;
+            padding: 10px 20px;
+            background: var(--light);
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .reset-btn:hover {
+            background: var(--danger);
+            color: white;
+            border-color: var(--danger);
+        }
+        
+        .results-info {
+            margin-top: 16px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .results-count {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        
         /* Products Section */
         .section-title {
             font-size: 2rem;
@@ -226,41 +286,11 @@
             box-shadow: var(--card-shadow);
             transition: var(--transition);
             border: 1px solid var(--light-gray);
-            position: relative;
         }
         
         .product-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--hover-shadow);
-        }
-        
-        .auth-required {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            border-radius: 20px;
-        }
-        
-        .auth-required h4 {
-            font-size: 1.5rem;
-            margin-bottom: 16px;
-            color: var(--dark);
-        }
-        
-        .auth-required p {
-            color: var(--gray);
-            margin-bottom: 24px;
-            text-align: center;
-            max-width: 80%;
         }
         
         .product-image-container {
@@ -300,48 +330,6 @@
             padding: 24px;
         }
         
-        .product-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-        
-        .product-category {
-            background: rgba(99, 102, 241, 0.1);
-            color: var(--primary);
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .product-rating {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .product-rating-stars {
-            display: flex;
-            gap: 2px;
-        }
-        
-        .product-rating-star {
-            color: #ffc107;
-            font-size: 0.9rem;
-        }
-        
-        .product-rating-score {
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        .product-rating-count {
-            color: var(--gray);
-            font-size: 0.85rem;
-        }
-        
         .product-title {
             font-size: 1.25rem;
             font-weight: 600;
@@ -356,82 +344,10 @@
             line-height: 1.6;
         }
         
-        .product-reviews {
-            margin-top: 16px;
-            border-top: 1px solid var(--light-gray);
-            padding-top: 16px;
-        }
-        
-        .review-item {
-            margin-bottom: 16px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .review-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .reviewer-name {
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .review-rating {
-            display: flex;
-            gap: 2px;
-            margin: 0;
-        }
-        
-        .review-rating-star {
-            color: #ffc107;
-            font-size: 0.8rem;
-        }
-        
-        .review-comment {
-            color: var(--dark);
-            line-height: 1.5;
-            font-size: 0.9rem;
-        }
-        
-        .view-reviews-btn {
-            background: none;
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            border-radius: 8px;
-            padding: 8px 16px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            margin: 20px auto 0;
-        }
-        
-        .view-reviews-btn:hover {
-            background: var(--primary);
-            color: white;
-        }
-        
         .product-footer {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            justify-content: center;
+            align-items: center;
             margin-top: 20px;
         }
         
@@ -455,12 +371,6 @@
         .add-to-cart:hover {
             background: var(--primary-dark);
             transform: scale(1.05);
-        }
-        
-        .add-to-cart:disabled {
-            background: var(--light-gray);
-            color: var(--gray);
-            cursor: not-allowed;
         }
         
         /* Variant Modal */
@@ -639,648 +549,6 @@
             color: var(--gray);
             cursor: not-allowed;
             transform: none;
-        }
-        
-        /* Auth Modal Styles */
-        .auth-modal {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0.9);
-            background: white;
-            border-radius: 24px;
-            padding: 40px;
-            max-width: 500px;
-            width: 90%;
-            z-index: 1003;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        .auth-modal.active {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(-50%, -50%) scale(1);
-        }
-        
-        .auth-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        
-        .auth-header h3 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            background: linear-gradient(to right, var(--primary), var(--primary-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .close-auth {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--gray);
-            transition: var(--transition);
-        }
-        
-        .close-auth:hover {
-            color: var(--dark);
-            transform: rotate(90deg);
-        }
-        
-        .auth-tabs {
-            display: flex;
-            margin-bottom: 30px;
-            border-bottom: 2px solid var(--light-gray);
-        }
-        
-        .auth-tab {
-            flex: 1;
-            padding: 16px;
-            text-align: center;
-            background: none;
-            border: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--gray);
-            cursor: pointer;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .auth-tab.active {
-            color: var(--primary);
-        }
-        
-        .auth-tab.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary);
-        }
-        
-        .auth-form {
-            display: none;
-        }
-        
-        .auth-form.active {
-            display: block;
-        }
-        
-        .success-message {
-            background: var(--secondary);
-            color: white;
-            padding: 16px;
-            border-radius: 12px;
-            text-align: center;
-            margin-bottom: 20px;
-            display: none;
-        }
-        
-        .success-message.show {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .form-group {
-            margin-bottom: 24px;
-        }
-        
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 16px;
-            border: 2px solid var(--light-gray);
-            border-radius: 12px;
-            font-size: 1rem;
-            font-family: 'Inter', sans-serif;
-            transition: var(--transition);
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        }
-        
-        .form-control.error {
-            border-color: var(--danger);
-        }
-        
-        .form-error {
-            color: var(--danger);
-            font-size: 0.85rem;
-            margin-top: 6px;
-            display: none;
-        }
-        
-        .form-error.show {
-            display: block;
-        }
-        
-        .auth-btn {
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(to right, var(--primary), var(--primary-dark));
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-top: 10px;
-        }
-        
-        .auth-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
-        }
-        
-        .auth-btn:disabled {
-            background: var(--light-gray);
-            color: var(--gray);
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-        
-        .auth-link {
-            text-align: center;
-            margin-top: 20px;
-            color: var(--gray);
-        }
-        
-        .auth-link a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        
-        .auth-link a:hover {
-            text-decoration: underline;
-        }
-        
-        .forgot-password {
-            display: block;
-            text-align: right;
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-top: -10px;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-        
-        .forgot-password:hover {
-            text-decoration: underline;
-        }
-        
-        .otp-group {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        
-        .otp-input {
-            width: 50px;
-            height: 60px;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border: 2px solid var(--light-gray);
-            border-radius: 10px;
-            transition: var(--transition);
-        }
-        
-        .otp-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        }
-        
-        .otp-input.error {
-            border-color: var(--danger);
-        }
-        
-        .otp-timer {
-            text-align: center;
-            color: var(--gray);
-            margin: 15px 0;
-        }
-        
-        .resend-otp {
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .resend-btn {
-            background: none;
-            border: none;
-            color: var(--primary);
-            cursor: pointer;
-            font-weight: 600;
-            text-decoration: underline;
-        }
-        
-        .resend-btn:disabled {
-            color: var(--gray);
-            cursor: not-allowed;
-            text-decoration: none;
-        }
-        
-        /* Rating Modal */
-        .rating-modal {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0.9);
-            background: white;
-            border-radius: 24px;
-            padding: 30px;
-            max-width: 500px;
-            width: 90%;
-            z-index: 1004;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-        
-        .rating-modal.active {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(-50%, -50%) scale(1);
-        }
-        
-        .rating-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-        
-        .rating-header h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-        
-        .close-rating {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--gray);
-            transition: var(--transition);
-        }
-        
-        .close-rating:hover {
-            color: var(--dark);
-            transform: rotate(90deg);
-        }
-        
-        /* Rating Summary */
-        .rating-summary {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .rating-summary-score {
-            text-align: center;
-        }
-        
-        .rating-summary-average {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--dark);
-            line-height: 1;
-        }
-        
-        .rating-summary-stars {
-            display: flex;
-            gap: 2px;
-            margin: 8px 0;
-        }
-        
-        .rating-summary-count {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-        
-        .rating-distribution {
-            flex: 1;
-        }
-        
-        .rating-bar {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-        
-        .rating-bar-label {
-            width: 60px;
-            font-size: 0.9rem;
-            color: var(--gray);
-        }
-        
-        .rating-bar-progress {
-            flex: 1;
-            height: 8px;
-            background: var(--light-gray);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .rating-bar-fill {
-            height: 100%;
-            background: #ffc107;
-            border-radius: 4px;
-        }
-        
-        /* Rating Form */
-        .rating-form {
-            margin-bottom: 30px;
-        }
-        
-        .form-title {
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: var(--dark);
-        }
-        
-        .your-rating {
-            margin-bottom: 20px;
-        }
-        
-        .rating-input {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-        
-        .rating-stars {
-            display: flex;
-            gap: 4px;
-            margin-bottom: 0;
-        }
-        
-        .rating-star {
-            color: var(--light-gray);
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .rating-star.active {
-            color: #ffc107;
-        }
-        
-        .rating-star.hover {
-            color: #ffc107;
-        }
-        
-        .rating-value {
-            font-weight: 600;
-            color: var(--dark);
-            min-width: 30px;
-        }
-        
-        .submit-rating-btn {
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(to right, var(--primary), var(--primary-dark));
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .submit-rating-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
-        }
-        
-        .submit-rating-btn:disabled {
-            background: var(--light-gray);
-            color: var(--gray);
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-        
-        .already-reviewed {
-            color: var(--secondary);
-            font-weight: 500;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        /* Reviews Filter */
-        .review-filters {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .review-filter {
-            background: none;
-            border: 1px solid var(--light-gray);
-            border-radius: 20px;
-            padding: 8px 16px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .review-filter:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-        
-        .review-filter.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        /* Reviews List */
-        .reviews-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-        
-        .reviews-list {
-            max-height: 300px;
-            overflow-y: auto;
-            padding-right: 10px;
-        }
-        
-        .review-item {
-            margin-bottom: 16px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--light-gray);
-        }
-        
-        .review-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .reviewer-name {
-            font-weight: 600;
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .user-review-badge {
-            background: var(--primary);
-            color: white;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: 600;
-        }
-        
-        .buyer-badge {
-            background: var(--secondary);
-            color: white;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            margin-left: 5px;
-        }
-        
-        .review-date {
-            color: var(--gray);
-            font-size: 0.85rem;
-        }
-        
-        .review-rating {
-            display: flex;
-            gap: 2px;
-            margin-bottom: 8px;
-        }
-        
-        .review-rating-star {
-            color: #ffc107;
-            font-size: 0.8rem;
-        }
-        
-        .review-comment {
-            color: var(--dark);
-            line-height: 1.5;
-            font-size: 0.95rem;
-        }
-        
-        .no-reviews {
-            color: var(--gray);
-            text-align: center;
-            padding: 20px 0;
-            font-style: italic;
-        }
-        
-        /* Add Review Button */
-        .add-review-btn {
-            background: linear-gradient(to right, var(--secondary), var(--secondary-dark));
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-            margin-top: 20px;
-            width: 100%;
-            justify-content: center;
-        }
-        
-        .add-review-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.2);
-        }
-        
-        .add-review-btn:disabled {
-            background: var(--light-gray);
-            color: var(--gray);
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-        
-        /* Purchase Status Styles */
-        .purchase-status {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin-top: 5px;
-            font-size: 0.8rem;
-        }
-        
-        .status-pending {
-            color: #f59e0b;
-        }
-        
-        .status-processing {
-            color: #3b82f6;
-        }
-        
-        .status-delivered {
-            color: var(--secondary);
         }
         
         /* Cart Sidebar */
@@ -1775,15 +1043,6 @@
             .products-grid {
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             }
-            
-            .rating-summary {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .rating-distribution {
-                width: 100%;
-            }
         }
         
         @media (max-width: 768px) {
@@ -1816,10 +1075,6 @@
                 font-size: 20px;
             }
             
-            .user-name {
-                display: none;
-            }
-            
             .cart-items-wrapper {
                 padding: 16px;
             }
@@ -1832,32 +1087,19 @@
                 padding: 16px;
             }
             
-            .variant-modal,
-            .auth-modal,
-            .rating-modal {
+            .variant-modal {
                 padding: 20px;
             }
             
-            .auth-header h3 {
-                font-size: 1.5rem;
+            .filter-container {
+                flex-direction: column;
+                align-items: flex-start;
             }
             
-            .otp-group {
-                gap: 5px;
-            }
-            
-            .otp-input {
-                width: 40px;
-                height: 50px;
-                font-size: 1.2rem;
-            }
-            
-            .rating-header h3 {
-                font-size: 1.3rem;
-            }
-            
-            .review-filters {
-                justify-content: center;
+            .reset-btn {
+                margin-left: 0;
+                margin-top: 12px;
+                align-self: flex-start;
             }
         }
         
@@ -1906,20 +1148,6 @@
                 gap: 16px;
             }
             
-            .otp-group {
-                gap: 5px;
-            }
-            
-            .otp-input {
-                width: 35px;
-                height: 45px;
-                font-size: 1.2rem;
-            }
-            
-            .rating-summary-average {
-                font-size: 2.5rem;
-            }
-            
             /* Untuk mobile, pastikan tombol selalu terlihat */
             .cart-footer {
                 padding-bottom: max(16px, env(safe-area-inset-bottom));
@@ -1927,14 +1155,12 @@
         }
         
         /* Scrollbar Styling */
-        .reviews-list::-webkit-scrollbar,
         .cart-items-wrapper::-webkit-scrollbar,
         .variant-list::-webkit-scrollbar,
         .order-summary::-webkit-scrollbar {
             width: 6px;
         }
         
-        .reviews-list::-webkit-scrollbar-track,
         .cart-items-wrapper::-webkit-scrollbar-track,
         .variant-list::-webkit-scrollbar-track,
         .order-summary::-webkit-scrollbar-track {
@@ -1942,7 +1168,6 @@
             border-radius: 3px;
         }
         
-        .reviews-list::-webkit-scrollbar-thumb,
         .cart-items-wrapper::-webkit-scrollbar-thumb,
         .variant-list::-webkit-scrollbar-thumb,
         .order-summary::-webkit-scrollbar-thumb {
@@ -1950,11 +1175,22 @@
             border-radius: 3px;
         }
         
-        .reviews-list::-webkit-scrollbar-thumb:hover,
         .cart-items-wrapper::-webkit-scrollbar-thumb:hover,
         .variant-list::-webkit-scrollbar-thumb:hover,
         .order-summary::-webkit-scrollbar-thumb:hover {
             background: #a1a1a1;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         /* Mobile Browser Address Bar Fix */
@@ -1971,23 +1207,12 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <div class="nav-left">
-                    <a href="#" class="logo">
-                        <div class="logo-icon">
-                            <img src="icon.png">
-                        </div>
-                        <span class="logo-text">TAKISTORE</span>
-                    </a>
-                </div>
-                
-                <div id="userSection">
-                    <!-- Tombol login akan ditampilkan jika belum login -->
-                    <button class="login-btn" id="openAuth">
-                        <i class="fas fa-user"></i>
-                        <span>Login / Daftar</span>
-                    </button>
-                </div>
-                
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <img src="icon.png">
+                    </div>
+                    <span class="logo-text">TAKISTORE</span>
+                </a>
                 <div class="nav-cart" id="openCart">
                     <i class="fas fa-shopping-bag"></i>
                     <span>Keranjang</span>
@@ -1997,147 +1222,39 @@
         </div>
     </header>
 
-    <!-- Auth Modal -->
-    <div class="auth-modal" id="authModal">
-        <div class="auth-header">
-            <h3 id="authModalTitle">Selamat Datang</h3>
-            <button class="close-auth" id="closeAuth">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        
-        <div class="success-message" id="successMessage">
-            <i class="fas fa-check-circle"></i>
-            <span id="successText"></span>
-        </div>
-        
-        <div class="auth-tabs">
-            <button class="auth-tab active" data-tab="login">Login</button>
-            <button class="auth-tab" data-tab="register">Daftar</button>
-        </div>
-        
-        <!-- Login Form -->
-        <div class="auth-form active" id="loginForm">
-            <div class="form-group">
-                <label class="form-label" for="loginUsername">Username atau Email</label>
-                <input type="text" id="loginUsername" class="form-control" placeholder="Masukkan username atau email">
-                <div class="form-error" id="loginUsernameError">Username atau email harus diisi</div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="loginPassword">Password</label>
-                <input type="password" id="loginPassword" class="form-control" placeholder="Masukkan password">
-                <div class="form-error" id="loginPasswordError">Password harus diisi</div>
-            </div>
-            
-            <a class="forgot-password" id="forgotPassword">Lupa Password?</a>
-            
-            <button class="auth-btn" id="loginBtn">Masuk</button>
-            
-            <div class="auth-link">
-                Belum punya akun? <a id="goToRegister">Daftar sekarang</a>
-            </div>
-        </div>
-        
-        <!-- Register Form -->
-        <div class="auth-form" id="registerForm">
-            <div class="form-group">
-                <label class="form-label" for="registerUsername">Username</label>
-                <input type="text" id="registerUsername" class="form-control" placeholder="Masukkan username">
-                <div class="form-error" id="registerUsernameError">Username harus diisi (min. 3 karakter)</div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="registerEmail">Email</label>
-                <input type="email" id="registerEmail" class="form-control" placeholder="Masukkan email">
-                <div class="form-error" id="registerEmailError">Email tidak valid</div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="registerPassword">Password</label>
-                <input type="password" id="registerPassword" class="form-control" placeholder="Masukkan password">
-                <div class="form-error" id="registerPasswordError">Password harus diisi (min. 6 karakter)</div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="registerConfirmPassword">Konfirmasi Password</label>
-                <input type="password" id="registerConfirmPassword" class="form-control" placeholder="Konfirmasi password">
-                <div class="form-error" id="registerConfirmPasswordError">Password tidak sama</div>
-            </div>
-            
-            <button class="auth-btn" id="registerBtn">Daftar</button>
-            
-            <div class="auth-link">
-                Sudah punya akun? <a id="goToLogin">Login sekarang</a>
-            </div>
-        </div>
-        
-        <!-- Forgot Password Form -->
-        <div class="auth-form" id="forgotForm">
-            <div class="form-group">
-                <label class="form-label" for="forgotEmail">Email</label>
-                <input type="email" id="forgotEmail" class="form-control" placeholder="Masukkan email terdaftar">
-                <div class="form-error" id="forgotEmailError">Email tidak valid</div>
-            </div>
-            
-            <button class="auth-btn" id="sendOtpBtn">Kirim Kode OTP</button>
-            
-            <div class="auth-link">
-                Ingat password? <a id="backToLoginFromForgot">Kembali ke login</a>
-            </div>
-        </div>
-        
-        <!-- OTP Verification Form -->
-        <div class="auth-form" id="otpForm">
-            <div class="form-group">
-                <label class="form-label">Kode OTP</label>
-                <div class="otp-group">
-                    <input type="text" maxlength="1" class="otp-input" data-index="0">
-                    <input type="text" maxlength="1" class="otp-input" data-index="1">
-                    <input type="text" maxlength="1" class="otp-input" data-index="2">
-                    <input type="text" maxlength="1" class="otp-input" data-index="3">
-                    <input type="text" maxlength="1" class="otp-input" data-index="4">
-                    <input type="text" maxlength="1" class="otp-input" data-index="5">
-                </div>
-                <div class="form-error" id="otpError">Kode OTP tidak valid</div>
-            </div>
-            
-            <div class="otp-timer" id="otpTimer">
-                Kode berlaku selama: <span id="timer">05:00</span>
-            </div>
-            
-            <div class="resend-otp">
-                <button class="resend-btn" id="resendOtpBtn" disabled>
-                    Kirim ulang kode OTP (<span id="resendTimer">60</span> detik)
-                </button>
-            </div>
-            
-            <button class="auth-btn" id="verifyOtpBtn">Verifikasi OTP</button>
-        </div>
-        
-        <!-- Reset Password Form -->
-        <div class="auth-form" id="resetPasswordForm">
-            <div class="form-group">
-                <label class="form-label" for="resetPassword">Password Baru</label>
-                <input type="password" id="resetPassword" class="form-control" placeholder="Masukkan password baru">
-                <div class="form-error" id="resetPasswordError">Password harus diisi (min. 6 karakter)</div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="resetConfirmPassword">Konfirmasi Password Baru</label>
-                <input type="password" id="resetConfirmPassword" class="form-control" placeholder="Konfirmasi password baru">
-                <div class="form-error" id="resetConfirmPasswordError">Password tidak sama</div>
-            </div>
-            
-            <button class="auth-btn" id="resetPasswordBtn">Reset Password</button>
-        </div>
-    </div>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>TAKISTORE</h1>
             <p>App Premium Murah, Terpercaya, Berkualitas, Legal</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section - BARU -->
+    <section class="container search-filter-section">
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchBox" placeholder="Cari aplikasi premium...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        
+        <div class="filter-container">
+            <span class="filter-label">Kategori:</span>
+            <div class="filter-buttons" id="categoryFilters">
+                <button class="filter-btn active" data-category="all">Semua</button>
+                <button class="filter-btn" data-category="Video Editing">Video Editing</button>
+                <button class="filter-btn" data-category="Design Grafis">Design Grafis</button>
+                <button class="filter-btn" data-category="AI Enchancer">AI Enchancer</button>
+                <button class="filter-btn" data-category="Music">Music</button>
+                <button class="filter-btn" data-category="Film">Film</button>
+            </div>
+            <button class="reset-btn" id="resetFilters">
+                <i class="fas fa-redo-alt"></i> Reset Filter
+            </button>
+        </div>
+        
+        <div class="results-info" id="resultsInfo">
+            <span>Menampilkan:</span>
+            <span class="results-count" id="resultsCount">0 produk</span>
         </div>
     </section>
 
@@ -2181,81 +1298,6 @@
                 <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
             </button>
         </div>
-    </div>
-
-    <!-- Rating Modal -->
-    <div class="rating-modal" id="ratingModal">
-        <div class="rating-header">
-            <h3 id="ratingModalTitle">Rating & Ulasan</h3>
-            <button class="close-rating" id="closeRating">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        
-        <!-- Rating Summary -->
-        <div class="rating-summary" id="ratingSummary">
-            <!-- Summary akan diisi oleh JavaScript -->
-        </div>
-        
-        <!-- Rating Form (hanya untuk user yang sudah login dan belum review) -->
-        <div class="rating-form" id="ratingForm">
-            <div class="form-title">Beri Rating & Ulasan</div>
-            
-            <div class="your-rating">
-                <div class="form-label">Rating Anda</div>
-                <div class="rating-input">
-                    <div class="rating-stars" id="userRatingStars">
-                        <i class="fas fa-star rating-star" data-value="1"></i>
-                        <i class="fas fa-star rating-star" data-value="2"></i>
-                        <i class="fas fa-star rating-star" data-value="3"></i>
-                        <i class="fas fa-star rating-star" data-value="4"></i>
-                        <i class="fas fa-star rating-star" data-value="5"></i>
-                    </div>
-                    <div class="rating-value" id="userRatingValue">0</div>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="reviewComment">Ulasan (opsional)</label>
-                <textarea 
-                    id="reviewComment" 
-                    class="form-control" 
-                    rows="4" 
-                    placeholder="Bagikan pengalaman Anda menggunakan aplikasi ini..."
-                ></textarea>
-                <div class="form-error" id="reviewCommentError">Ulasan terlalu pendek</div>
-            </div>
-            
-            <button class="submit-rating-btn" id="submitRatingBtn" disabled>
-                <i class="fas fa-paper-plane"></i> Kirim Rating & Ulasan
-            </button>
-            
-            <div class="already-reviewed" id="alreadyReviewed" style="display: none;">
-                <i class="fas fa-check-circle"></i>
-                <span>Anda sudah memberikan rating untuk produk ini</span>
-            </div>
-        </div>
-        
-        <!-- Reviews Filter -->
-        <div class="review-filters" id="reviewFilters">
-            <button class="review-filter active" data-filter="all">Semua</button>
-            <button class="review-filter" data-filter="5">5 bintang</button>
-            <button class="review-filter" data-filter="4">4 bintang</button>
-            <button class="review-filter" data-filter="3">3 bintang</button>
-            <button class="review-filter" data-filter="2">2 bintang</button>
-            <button class="review-filter" data-filter="1">1 bintang</button>
-        </div>
-        
-        <!-- Reviews List -->
-        <div class="reviews-title">Ulasan Pengguna</div>
-        <div class="reviews-list" id="reviewsList">
-            <!-- Reviews will be loaded by JavaScript -->
-        </div>
-        
-        <!-- Add Review Button (untuk user yang belum login) -->
-        <button class="add-review-btn" id="addReviewBtn" style="display: none;">
-            <i class="fas fa-star"></i> Login untuk Memberikan Rating
-        </button>
     </div>
 
     <!-- Cart Sidebar -->
@@ -2363,3 +1405,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+[file content end]
